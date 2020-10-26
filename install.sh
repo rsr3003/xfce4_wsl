@@ -1,7 +1,7 @@
 #! /bin/bash
 
 # Funtions
-apply_theme(color) {
+apply_theme() {
   echo -e "Set icon theme"
   echo -e "Set wm theme"
   echo -e "Set GTK theme"
@@ -26,7 +26,7 @@ do
   echo "Do you want to install a nice looking theme or keep the default settings??(y/n): " && read CHOICE;
   if [ $CHOICE = y ]
   then
-    apply_theme()
+    apply_theme
     break
   elif [ $CHOICE = n ]
   then
