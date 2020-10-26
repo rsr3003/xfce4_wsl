@@ -5,7 +5,7 @@ apply_theme() {
   echo -e "Set icon theme"
   echo -e "Set wm theme"
   echo -e "Set GTK theme"
-  echo -e "Set up .confit/xfce4"
+  echo -e "Set up .config/xfce4"
 }
 
 
