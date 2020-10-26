@@ -1,0 +1,5 @@
+#! /bin/bash
+
+sudo /etc/init.d/xrdp $1
+
+# start, stop or restart
