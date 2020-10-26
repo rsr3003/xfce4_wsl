@@ -11,7 +11,7 @@ apply_theme() {
 
 
 echo -e "............Starting Setup............."
-sudo apt update -y && sudo apt ugrade -y &&
+sudo apt update -y && sudo apt upgrade -y &&
 sudo apt install xfce4 xrdp -y &&
 git clone https://github.com/rsr3003/xfce4_wsl.git ~/xfce4_wsl && cd ~/.xfce4_wsl &&
 chmod +x ~/xfce4_wsl/install.sh &&
