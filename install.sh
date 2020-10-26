@@ -20,10 +20,9 @@ chmod +x ~/xfce4_wsl/wslgui &&
 sudo sed -i 's/max_bpp=32/#max_bpp=32\nmax_bpp=128/g' /etc/xrdp/xrdp.ini
 sudo sed -i 's/xserverbpp=24/#xserverbpp=24\nxserverbpp=128/g' /etc/xrdp/xrdp.ini
 sudo cp ~/xfce4_wsl/startwm.sh /etc/xrdp/ && sudo cp ~/xfce4_wsl/wslgui /usr/bin/ &&
-echo "Do you want to install a nice looking theme or keep the default settings??(y/n): " && read CHOICE &&
 while [ 1 ];
 do
-  echo "Do you want to install a nice looking theme or keep the default settings??(y/n): " && read CHOICE;
+  echo "Do you want to install a nice looking theme or keep the default settings??(y/n): " && read CHOICE
   if [ $CHOICE = y ]
   then
     apply_theme
@@ -33,7 +32,7 @@ do
     echo "Ok.. No themes applied..."
     break
   fi
-done
+done &&
 echo -e "\n........................Setup Complete..........................\n"
 echo -e "............Run \"wslgui start\" to start the xRDP server............."
 echo -e "........Now open \"Remote Desktop Connection\" in Windows........."
