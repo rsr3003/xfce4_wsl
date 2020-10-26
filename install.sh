@@ -22,12 +22,13 @@ sudo sed -i 's/xserverbpp=24/#xserverbpp=24\nxserverbpp=128/g' /etc/xrdp/xrdp.in
 sudo cp ~/xfce4_wsl/startwm.sh /etc/xrdp/ && sudo cp ~/xfce4_wsl/wslgui /usr/bin/ &&
 while [ 1 ];
 do
-  echo "Do you want to install a nice looking theme or keep the default settings??(y/n): " && read CHOICE
-  if [ $CHOICE = y ]
+  echo "Do you want to install a nice looking theme or keep the default settings??(y/n): "
+  read CHOICE
+  if [ $CHOICE = "y" ]
   then
     apply_theme
     break
-  elif [ $CHOICE = n ]
+  elif [ $CHOICE = "n" ]
   then
     echo "Ok.. No themes applied..."
     break
