@@ -2,10 +2,10 @@
 
 # Funtions
 apply_theme() {
-  echo -e "Set icon theme"
-  echo -e "Set wm theme"
-  echo -e "Set GTK theme"
-  echo -e "Set up .config/xfce4"
+  sudo apt install xfce4-whiskermenu-plugin papirus-icon-theme -y &&
+  sudo cp -r ~/xfce4_wsl/Matcha-dark-azul /usr/share/themes/ &&
+  mkdir ~/.config && cp ~/xfce4_wsl/xfce4 ~/.config/ &&
+  echo -e "............Theme Applied Successfully...........\n"
 }
 
 
@@ -37,4 +37,4 @@ done &&
 echo -e "\n........................Setup Complete..........................\n"
 echo -e "............Run \"wslgui start\" to start the xRDP server............."
 echo -e "........Now open \"Remote Desktop Connection\" in Windows........."
-echo -e "..........Connect to \"localhost:3390\" , Login & Enjoy!!........."
+echo -e "..........Connect to \"localhost:3389\" , Login & Enjoy!!........."
