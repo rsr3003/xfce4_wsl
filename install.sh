@@ -13,16 +13,13 @@ apply_theme() {
 echo -e "............Starting Setup............."
 sudo apt update -y && sudo apt upgrade -y &&
 sudo apt install xfce4 xrdp -y &&
-git clone https://github.com/rsr3003/xfce4_wsl.git ~/xfce4_wsl &&
-chmod +x ~/xfce4_wsl/install.sh &&
-chmod +x ~/xfce4_wsl/uninstall.sh &&
 sudo sed -i 's/max_bpp=32/#max_bpp=32\nmax_bpp=128/g' /etc/xrdp/xrdp.ini
 sudo sed -i 's/xserverbpp=24/#xserverbpp=24\nxserverbpp=128/g' /etc/xrdp/xrdp.ini
 sudo cp ~/xfce4_wsl/startwm.sh /etc/xrdp/ && sudo cp ~/xfce4_wsl/wslgui /usr/bin/ &&
 sudo chmod +x /usr/bin/wslgui &&
 while [ 1 ];
 do
-  echo "Do you want to install a nice looking theme or keep the default settings??(y/n): "
+  echo "Do you want to install a nice looking theme or keep the default settings??(y/n): " &&
   read CHOICE
   if [ $CHOICE = "y" ]
   then
