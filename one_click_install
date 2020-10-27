@@ -1,5 +1,4 @@
 #! /bin/bash
 
 git clone https://github.com/rsr3003/xfce4_wsl.git ~/xfce4_wsl &&
-chmod +x ~/xfce4_wsl/install.sh &&
-./install.sh
+chmod +x ~/xfce4_wsl/install.sh && ~/xfce4_wsl/install.sh
